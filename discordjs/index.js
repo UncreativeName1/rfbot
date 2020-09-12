@@ -209,7 +209,8 @@ const embedFour = new Discord.MessageEmbed()
     	.setFooter('Add my bot - !invite');
 const inviteLink = new Discord.MessageEmbed()
     	.setColor('#0054ff')
-   	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot');
+   	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot')
+	.addField('Join the support server here:', 'https://discord.gg/rgdMACf');
 
     if (message.content === `${prefix}help`) {
         message.channel.send(embedOne);
