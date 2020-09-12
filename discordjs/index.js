@@ -190,25 +190,26 @@ client.on('message', message => {
 const embedOne = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('All Commands')
-    .addField('!ww1', 'Get a random fact about the First World War!')
-    .addField('!ww2', 'Get a random fact about the Second World War!')
-    .addField('!sports', 'Get a random fact about a sports achievement!')
-    .setFooter('Add my bot - !invite');
+	.addField('!ww1', 'Get a random fact about the First World War!')
+	.addField('!ww2', 'Get a random fact about the Second World War!')
+	.addField('!sports', 'Get a random fact about a sports achievement!')
+	.addField('!invite', 'Get the link to invite my bot!')
+	.setFooter('Add my bot - !invite');
 const embedTwo = new Discord.MessageEmbed()
 	.setColor('#0000ff')
-    .addField('Topic - WW1', resOne[Math.floor(Math.random() * resOne.length)])
-    .setFooter('Add my bot - !invite');
+	.addField('Topic - WW1', resOne[Math.floor(Math.random() * resOne.length)])
+   	.setFooter('Add my bot - !invite');
 const embedThree = new Discord.MessageEmbed()
 	.setColor('#0054ff')
-    .addField('Topic - WW2', resTwo[Math.floor(Math.random() * resTwo.length)])
-    .setFooter('Add my bot - !invite');
+    	.addField('Topic - WW2', resTwo[Math.floor(Math.random() * resTwo.length)])
+    	.setFooter('Add my bot - !invite');
 const embedFour = new Discord.MessageEmbed()
 	.setColor('#0073ff')
-    .addField('Topic - Sports', resThree[Math.floor(Math.random() * resThree.length)])
-    .setFooter('Add my bot - !invite');
+    	.addField('Topic - Sports', resThree[Math.floor(Math.random() * resThree.length)])
+    	.setFooter('Add my bot - !invite');
 const inviteLink = new Discord.MessageEmbed()
-    .setColor('#0054ff')
-    .addField('Add my bot here:', 'http://bit.ly/randomfactsbot');
+    	.setColor('#0054ff')
+   	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot');
 
     if (message.content === `${prefix}help`) {
         message.channel.send(embedOne);
