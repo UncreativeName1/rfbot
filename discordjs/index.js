@@ -210,7 +210,8 @@ const embedFour = new Discord.MessageEmbed()
 const inviteLink = new Discord.MessageEmbed()
     	.setColor('#0054ff')
    	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot')
-	.addField('Join the support server here:', 'https://discord.gg/rgdMACf');
+	.addField('Join the support server here:', 'https://discord.gg/rgdMACf')
+	.addField('If you own a server with more than 25 members and you invite the bot, you\'ll be given a special role.', 'Join now!');
 
     if (message.content === `${prefix}help`) {
         message.channel.send(embedOne);
