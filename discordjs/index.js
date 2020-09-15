@@ -185,43 +185,80 @@ const resThree = [
     'The silhouette on the NBA Logo is Hall of Fame Laker Jerry West.',
     // 50
 ];
+const resFour = [
+	'Shigeru Miyamoto, the creator of Super Mario Bros. and Donkey Kong, is not allowed to bike to work because his safety is too important to Nintendo.',
+	'The Nintendo character Kirby was named after John Kirby, the legal counsel for Nintendo who helped them win their lawsuit with Universal Studios in 1982. John Kirby was gifted a sailboat Christened the “Donkey Kong” and given exclusive rights to name any boat he owned “Donkey Kong".',
+	'Ghostbusters: The Video Game (2009) has voice acting from all four of the original cast members (Bill Murray, Dan Aykroyd, Harold Ramis, Ernie Hudson), who helped write the script as well. Aykroyd considers it "essentially the third movie".',
+	'Many American public libraries carry video games as an attempt to lure teenagers into a library. The result is more teenagers coming to the library and books are being checked out at a rate that exceeds what it was before the gamers arrived.',
+	'In 2005, a glitch in World of Warcraft allowed a plague to spread in the game leading non-infected players to abandon cities while those infected were forced into quarantines.',
+	'The creators of Pac-Man did not know how the game ended as it was designed to run indefinitely. It was only when Billy Mitchell finished the game, after all its internal storage ran out, that they saw how it ended.',
+	'Every time Pac-Man eats a regular dot, he stops moving for one frame (1/60th of a second), slowing his progress by roughly 10% just enough for the following ghost to overtake him.',
+	'PETA had a problem with the whaling segment of Assassins Creed: Black Flag. Ubisoft dismissed it saying they did not condone whaling any more than they condoned a pirate lifestyle.',
+	'A \'Red Shirt Guy\' (Ian Bates) stumped a panel of World Of Warcraft developers during a Q&A at BlizzCon 2010 by asking them about an inconsistency in the lore.',
+	'Nintendo Power stopped accepting the many Tetris high scores submitted by Steve Wozniak. So he reversed his name, and Evets Kainzow was printed.',
+	//10
+	'Grand Theft Auto was originally a racing game called Race\'n\'Chase, however, a glitch made the police cars go crazy, ramming the player. This glitch was so popular with testers that they rebuilt the game around it, creating GTA.',
+	'If you beat the video game Twisted Metal III as the demon Minion, he wishes to spend eternity in Hell. In standard Twisted Metal fashion, the wish is turned against him and he is sent to Hell, Michigan.',
+	'Henry Cavill almost missed the call for the role of Superman because he was playing "World of Warcraft".',
+	'A father made his son work his way to modernity by playing through the history of video games chronologically rather than let him play whatever video game he wanted. The boy started with 1979\'s Galaxian.',
+	'Best Buy removed the fighting video game "Primal Rage" from its shelves after an Arizona woman complained that her 11-year-old son had faithfully portrayed one of the game\'s gorilla-like character\'s "golden shower/urination" fatality move.',
+	'Goldeneye 007 for N64 only had 9 developers on the team, and 8 of them had never worked on video games before.',
+	'A study surveying 5000 children on the video game and social habits, came to a conclusion that those playing video games on a regular basis are more satisfied with their lives, are less prone to being hyperactive, have less emotional issues than those who don’t play video games at all.',
+	'During WW2, the British government, with the cooperation of the game’s publisher, hid real bank notes among Monopoly money. Compasses, metal files, and a folded silk map—which was less likely to disintegrate than a paper one—were also concealed inside the box to help the POWs flee their captors.',
+	'The number of permutations within a deck of cards is mind-bogglingly large: 8 x 10^67 (or an 8 with 67 zeroes after it). That means there are more card combinations than stars in the Milky Way.',
+	'$8.86 is an average price for a game on Steam, a popular game engine.',
+	//20
+	'According to the Steam game statistics of 2019 there were approximately 25 games a day released on the platform. This amounts to about 50% of all games released in 2019.',
+	'PUBG became one of the most popular RPG/shooter in 2019. It counted more than half a million active players every day during 2019.',
+	'Mortal Kombat was developed in ten months by a team of four people.',
+	'The Game Boy version of Tetris was the first game played in space. It was played by Russian cosmonaut Aleksandr A. Serebrov in 1993.',
+	'The US Army used to have an esports team. However, this caused a lot of protest in America because to many people this wasn\'t a good usage of government funding and therefore it was shut down very soon after.',
+];
 
 client.on('message', message => {
 const embedOne = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('All Commands')
-	.addField('!ww1', 'Get a random fact about the First World War!')
-	.addField('!ww2', 'Get a random fact about the Second World War!')
-	.addField('!sports', 'Get a random fact about a sports achievement!')
-	.addField('!invite', 'Get the link to invite my bot!')
+	.addField('=ww1', 'Get a random fact about the First World War!')
+	.addField('=ww2', 'Get a random fact about the Second World War!')
+	.addField('=sports', 'Get a random fact about a sports achievement!')
+	.addField('=gaming', 'Get a random fact about games!')
+	.addField('=invite', 'Get the link to invite my bot!')
+	.addField('NEWS', 'We\'ve changed the bot prefix to "=" due to many requests. From now on, to use the bot, do =[topic]. For example, =help.')
 	.setFooter('Add my bot - !invite');
 const embedTwo = new Discord.MessageEmbed()
-	.setColor('#0000ff')
+	.setColor('#0099ff')
 	.addField('Topic - WW1', resOne[Math.floor(Math.random() * resOne.length)])
-   	.setFooter('Add my bot - !invite');
+   	.setFooter('Add my bot - =invite');
 const embedThree = new Discord.MessageEmbed()
-	.setColor('#0054ff')
+	.setColor('#0099ff')
     	.addField('Topic - WW2', resTwo[Math.floor(Math.random() * resTwo.length)])
-    	.setFooter('Add my bot - !invite');
+    	.setFooter('Add my bot - =invite');
 const embedFour = new Discord.MessageEmbed()
-	.setColor('#0073ff')
+	.setColor('#0099ff')
     	.addField('Topic - Sports', resThree[Math.floor(Math.random() * resThree.length)])
-    	.setFooter('Add my bot - !invite');
+    	.setFooter('Add my bot - =invite');
+const embedFive = new Discord.MessageEmbed()
+	.setColour('#0099ff')
+	.addField('Topic - Gaming', resFour[Math.floor(Math.random() * resFour.length)])
+	.setFooter('Add my bot - =invite');
 const inviteLink = new Discord.MessageEmbed()
     	.setColor('#0054ff')
    	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot')
 	.addField('Join the support server here:', 'https://discord.gg/rgdMACf')
 	.addField('If you own a server with more than 25 members and you invite the bot, you\'ll be given a special role.', 'Join now!');
 
-    if (message.content === `${prefix}help`) {
-        message.channel.send(embedOne);
-    }else if(message.content === `${prefix}ww1`) {
-            message.channel.send(embedTwo);
-    }else if(message.content === `${prefix}ww2`) {
-        message.channel.send(embedThree);
-    }else if(message.content === `${prefix}sports`) {
-        message.channel.send(embedFour);
-    }else if(message.content === `${prefix}invite`) {
-        message.channel.send(inviteLink);
-    }
+if (message.content === `${prefix}help`) {
+    message.channel.send(embedOne);
+}else if(message.content === `${prefix}ww1`) {
+        message.channel.send(embedTwo);
+}else if(message.content === `${prefix}ww2`) {
+    message.channel.send(embedThree);
+}else if(message.content === `${prefix}sports`) {
+    message.channel.send(embedFour);
+}else if(message.content === `${prefix}gaming`) {
+    message.channel.send(embedFive);
+}else if(message.content === `${prefix}invite`) {
+    message.channel.send(inviteLink);
+}
 });
