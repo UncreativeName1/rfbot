@@ -239,7 +239,7 @@ const embedFour = new Discord.MessageEmbed()
     	.addField('Topic - Sports', resThree[Math.floor(Math.random() * resThree.length)])
     	.setFooter('Add my bot - r!invite');
 const embedFive = new Discord.MessageEmbed()
-	.setColour('#0099ff')
+	.setColor('#0099ff')
 	.addField('Topic - Gaming', resFour[Math.floor(Math.random() * resFour.length)])
 	.setFooter('Add my bot - r!invite');
 const inviteLink = new Discord.MessageEmbed()
