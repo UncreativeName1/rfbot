@@ -196,7 +196,7 @@ const resFour = [
 	'PETA had a problem with the whaling segment of Assassins Creed: Black Flag. Ubisoft dismissed it saying they did not condone whaling any more than they condoned a pirate lifestyle.',
 	'A \'Red Shirt Guy\' (Ian Bates) stumped a panel of World Of Warcraft developers during a Q&A at BlizzCon 2010 by asking them about an inconsistency in the lore.',
 	'Nintendo Power stopped accepting the many Tetris high scores submitted by Steve Wozniak. So he reversed his name, and Evets Kainzow was printed.',
-	//10
+	// 10
 	'Grand Theft Auto was originally a racing game called Race\'n\'Chase, however, a glitch made the police cars go crazy, ramming the player. This glitch was so popular with testers that they rebuilt the game around it, creating GTA.',
 	'If you beat the video game Twisted Metal III as the demon Minion, he wishes to spend eternity in Hell. In standard Twisted Metal fashion, the wish is turned against him and he is sent to Hell, Michigan.',
 	'Henry Cavill almost missed the call for the role of Superman because he was playing "World of Warcraft".',
@@ -207,7 +207,7 @@ const resFour = [
 	'During WW2, the British government, with the cooperation of the game’s publisher, hid real bank notes among Monopoly money. Compasses, metal files, and a folded silk map—which was less likely to disintegrate than a paper one—were also concealed inside the box to help the POWs flee their captors.',
 	'The number of permutations within a deck of cards is mind-bogglingly large: 8 x 10^67 (or an 8 with 67 zeroes after it). That means there are more card combinations than stars in the Milky Way.',
 	'$8.86 is an average price for a game on Steam, a popular game engine.',
-	//20
+	// 20
 	'According to the Steam game statistics of 2019 there were approximately 25 games a day released on the platform. This amounts to about 50% of all games released in 2019.',
 	'PUBG became one of the most popular RPG/shooter in 2019. It counted more than half a million active players every day during 2019.',
 	'Mortal Kombat was developed in ten months by a team of four people.',
@@ -219,46 +219,46 @@ client.on('message', message => {
 const embedOne = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.setTitle('All Commands')
-	.addField('=ww1', 'Get a random fact about the First World War!')
-	.addField('=ww2', 'Get a random fact about the Second World War!')
-	.addField('=sports', 'Get a random fact about a sports achievement!')
-	.addField('=gaming', 'Get a random fact about games!')
-	.addField('=invite', 'Get the link to invite my bot!')
-	.addField('NEWS', 'We\'ve changed the bot prefix to "=" due to many requests. From now on, to use the bot, do =[topic]. For example, =help.')
-	.setFooter('Add my bot - !invite');
+	.addField('r!ww1', 'Get a random fact about the First World War!')
+	.addField('r!ww2', 'Get a random fact about the Second World War!')
+	.addField('r!sports', 'Get a random fact about a sports achievement!')
+	.addField('r!gaming', 'Get a random fact about games!')
+	.addField('r!invite', 'Get the link to invite my bot!')
+	.addField('NEWS', 'We\'ve changed the bot prefix to "r!" due to many requests. From now on, to use the bot, do r![topic]. For example, r!help.')
+	.setFooter('Add my bot - r!invite');
 const embedTwo = new Discord.MessageEmbed()
 	.setColor('#0099ff')
 	.addField('Topic - WW1', resOne[Math.floor(Math.random() * resOne.length)])
-   	.setFooter('Add my bot - =invite');
+   	.setFooter('Add my bot - r!invite');
 const embedThree = new Discord.MessageEmbed()
 	.setColor('#0099ff')
     	.addField('Topic - WW2', resTwo[Math.floor(Math.random() * resTwo.length)])
-    	.setFooter('Add my bot - =invite');
+    	.setFooter('Add my bot - r!invite');
 const embedFour = new Discord.MessageEmbed()
 	.setColor('#0099ff')
     	.addField('Topic - Sports', resThree[Math.floor(Math.random() * resThree.length)])
-    	.setFooter('Add my bot - =invite');
+    	.setFooter('Add my bot - r!invite');
 const embedFive = new Discord.MessageEmbed()
 	.setColour('#0099ff')
 	.addField('Topic - Gaming', resFour[Math.floor(Math.random() * resFour.length)])
-	.setFooter('Add my bot - =invite');
+	.setFooter('Add my bot - r!invite');
 const inviteLink = new Discord.MessageEmbed()
     	.setColor('#0054ff')
    	.addField('Add my bot here:', 'http://bit.ly/randomfactsbot')
 	.addField('Join the support server here:', 'https://discord.gg/rgdMACf')
 	.addField('If you own a server with more than 25 members and you invite the bot, you\'ll be given a special role.', 'Join now!');
 
-if (message.content === `${prefix}help`) {
-    message.channel.send(embedOne);
-}else if(message.content === `${prefix}ww1`) {
-        message.channel.send(embedTwo);
-}else if(message.content === `${prefix}ww2`) {
-    message.channel.send(embedThree);
-}else if(message.content === `${prefix}sports`) {
-    message.channel.send(embedFour);
-}else if(message.content === `${prefix}gaming`) {
-    message.channel.send(embedFive);
-}else if(message.content === `${prefix}invite`) {
-    message.channel.send(inviteLink);
+	if (message.content === `${prefix}help`) {
+   		message.channel.send(embedOne);
+	}else if(message.content === `${prefix}ww1`) {
+        	message.channel.send(embedTwo);
+	}else if(message.content === `${prefix}ww2`) {
+    		message.channel.send(embedThree);
+	}else if(message.content === `${prefix}sports`) {
+    		message.channel.send(embedFour);
+	}else if(message.content === `${prefix}gaming`) {
+    		message.channel.send(embedFive);
+	}else if(message.content === `${prefix}invite`) {
+    		message.channel.send(inviteLink);
 }
 });
